@@ -10,6 +10,7 @@ import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ROUTES } from './app.routes';
 import { NoimgPipe } from './pipes/noimg.pipe';
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NoimgPipe } from './pipes/noimg.pipe';
     ArtistaComponent,
     NavbarComponent,
     NoimgPipe,
+    TarjetasComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,14 +4,6 @@
   </div>
 </div>
 
-<div class="card-columns mt-5">
-  <div *ngFor="let artist of newArtists" class="card">
-    <img class="card-img-top" [src]="artist.images | noimg" alt="Card image cap" />
-    <div class="card-body">
-      <h5 class="card-title">{{artist.name}}</h5>
-      <p class="card-text">
-        <span *ngFor="let genero of artist.genres" class="badge badge-success">{{genero}}</span>
-      </p>
-    </div>
-  </div>
+<div class="mt-5">
+  <app-tarjetas [items]="newArtists"></app-tarjetas>
 </div>
