@@ -4,5 +4,6 @@
   </li>
 </ul> -->
 
-<app-loading></app-loading>
+<app-loading *ngIf="loading" class="mb-3"></app-loading>
+
 <app-tarjetas [items]="newReleases"></app-tarjetas>

@@ -10,6 +10,7 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 export class HomeComponent implements OnInit {
   // paises: any[] = [];
   newReleases: any[] = [];
+  loading: boolean = false;
 
   constructor(private http: HttpClient, private spotify: SpotifyService) {
     // http.get('https://restcountries.com/v2/lang/es').subscribe((pais: any) => {
@@ -17,9 +18,14 @@ export class HomeComponent implements OnInit {
     //   console.log(this.paises)
     // })
 
+    this.loading = true;
+
     this.spotify
       .getNewReleases()
-      .subscribe((data) => (this.newReleases = data));
+      .subscribe((data) => {
+        this.newReleases = data;
+        this.loading = false;
+      });
   }
 
   ngOnInit(): void {}

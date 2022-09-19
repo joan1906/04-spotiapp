@@ -10,6 +10,8 @@
   </div>
 </div>
 
-<div class="mt-5">
-  <app-tarjetas [items]="newArtists"></app-tarjetas>
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+
+<div class="m-5">
+  <app-tarjetas *ngIf="!loading" [items]="newArtists"></app-tarjetas>
 </div>
