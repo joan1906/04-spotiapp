@@ -6,4 +6,9 @@
 
 <app-loading *ngIf="loading" class="mb-3"></app-loading>
 
+<div *ngIf="error" class="alert alert-danger animated fadeIn">
+  <h3>Error</h3>
+  <p>{{messageError}}</p>
+</div>
+
 <app-tarjetas [items]="newReleases"></app-tarjetas>
